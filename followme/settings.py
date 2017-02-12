@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'operation',
     'xadmin',
     'crispy_forms',
+    'captcha',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -145,3 +146,13 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+EMAIL_HOST = "smtp.163.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "wzqnls@163.com"
+EMAIL_HOST_PASSWORD = "lishuo120824"
+EMAIL_USE_TLS = False
+EMAIL_FROM = "wzqnls@163.com"
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

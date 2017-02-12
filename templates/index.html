@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+{% load staticfiles %}
 <head>
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
@@ -32,7 +32,7 @@
                                     <dt><img width="80" height="80" src="/static/media/image/2016/12/default_big_14.png"/></dt>
                                     <dd>
                                         <h2>{{ request.user.username }}</h2>
-                                        <p>{{ request.user.password }}</p>
+
                                     </dd>
                                 </dl>
                                 <div class="btn">
@@ -43,8 +43,8 @@
                         </div>
                     {% else %}
                     <!--登录后跳转-->
-                        <a style="color:white" class="fr registerbtn" href="register.html">注册</a>
-                        <a style="color:white" class="fr loginbtn" href="/login/">登录</a>
+                        <a style="color:white" class="fr registerbtn" href="{% url 'register' %}">注册</a>
+                        <a style="color:white" class="fr loginbtn" href="{% url 'login' %}">登录</a>
                     {% endif %}
                 </div>
             </div>
