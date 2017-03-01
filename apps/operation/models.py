@@ -7,6 +7,7 @@ from django.db import models
 
 from users.models import UserProfile
 from courses.models import Course
+
 # Create your models here.
 
 

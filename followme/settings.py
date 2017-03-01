@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'captcha',
+    'pure_pagination',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -79,6 +80,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # for media
+                'django.core.context_processors.media',
             ],
         },
     },
@@ -149,10 +152,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 EMAIL_HOST = "smtp.163.com"
 EMAIL_PORT = 25
-EMAIL_HOST_USER = "***"
-EMAIL_HOST_PASSWORD = "***"
+EMAIL_HOST_USER = "testfordjango@163.com"
+EMAIL_HOST_PASSWORD = "django123"
 EMAIL_USE_TLS = False
-EMAIL_FROM = "***"
+EMAIL_FROM = "testfordjango@163.com"
 
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
