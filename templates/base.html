@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-	<title>{% block title %}FollowMe{% endblock %}</title>
+	<title>{% block title %}慕学在线首页{% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -20,6 +20,7 @@
 		<div  class=" header">
  			<div class="top">
 				<div class="wp">
+					<div class="fl"><p>服务电话：<b>33333333</b></p></div>
 					<!--登录后跳转-->
 
                         {% if request.user.is_authenticated %}
@@ -86,7 +87,7 @@
 								</a>
 							</li>
 							<li {% if request.path|slice:'12' == '/org/teacher' %}class="active"{% endif %}>
-								<a href="{% url 'org:teacher_list' %}">授课教师</a>
+{#								<a href="{% url 'org:teacher_list' %}">授课教师</a>#}
 							</li>
 							<li {% if request.path|slice:'9' == '/org/list' %}class="active" {% endif %}><a href="{% url 'org:org_list' %}">授课机构</a></li>
 						</ul>
@@ -114,14 +115,15 @@
 			<div class="wp">
 				<ul class="cont">
 					<li class="logo"><a href=""><img src="{% static 'images/footlogo.png' %}"/></a></li>
-					<li class="code"><img src="{% static 'images/code.png' %}"/><p class="center">扫描关注微信</p></li>
-					<li class="third"><img class="fl" src="{% static 'images/tell.png' %}"/><p class="tell">123456789</p><p class="time">周一至周日 9:00-18:00</p></li>
+					<li class="code"><img src="{% static 'images/code.jpg' %}"/><p class="center">扫描关注微信</p></li>
+					<li class="third"><img class="fl" src="{% static 'images/tell.png' %}"/><p class="tell">33333333</p><p class="time">周一至周日 9:00-18:00</p></li>
 				</ul>
 
 			</div>
 			<p class="line"></p>
 			<div class="wp clear">
-                <span class="fr">copyright ? FollowMe</span>
+                <span class="fl">? 2016 www.projectsedu.com 慕学在线-在线学习交流平台 保留所有权利</span>
+                <span class="fr">copyright ? 2016 ICP备案证书号：蜀ICP备xxxxx号-1</span>
 			</div>
 		</div>
 	</footer>
